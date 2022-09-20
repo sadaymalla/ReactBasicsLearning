@@ -5,20 +5,27 @@ import JSON from './db.json';
 
 import Header from "./components/header";
 import Newslist from "./components/news_list";
+import Footer from "./components/footer";
 
 class App extends Component{
 
     state={
-        news:JSON
+        news:JSON,
+        footerText:"I am happy footer"
     }
 
 
     render(){
+
+        const{news, footerText} = this.state;
             return(
             <>
                 <Header/>
                 <Newslist
-                    news={this.state.news}
+                    news={news}
+                />
+                <Footer 
+                    footerText={footerText}
                 />
             </>
             )
