@@ -11,6 +11,7 @@ const newslist = (props) =>{
     return(
         <>
             {news}
+            {props.children}
         </>
     )
 }
